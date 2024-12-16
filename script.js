@@ -51,6 +51,7 @@ function game_over(){
     user_pattern=[];
     lost=1;
     f=0;
+    $(".btn").off("click");
 }
 
 
@@ -83,6 +84,7 @@ function button_pressed_user(id){
 
         if(user_pattern[i]!=pattern[i]){
             game_over();
+            return;
         }
     }
 
